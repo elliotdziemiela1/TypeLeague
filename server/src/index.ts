@@ -12,10 +12,8 @@ interface UserData {
 }
 
 // connect to SupaBase
-// const supabaseUrl = process.env.SUPABASE_URL;
-// const supabaseKey = process.env.SUPABASE_KEY;
-const supabaseUrl = "https://ajuclqklugoxuutnfvrp.supabase.co";
-const supabaseKey = "sb_secret_liDHxVWdcLkDQPELO1SVMw_D8pJBisJ";
+const supabaseUrl = process.env.SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey)
 
 const app = express();
