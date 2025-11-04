@@ -6,8 +6,8 @@ import { createClient } from "@supabase/supabase-js";
 
 const port = 3000;
 
-interface UserData {
-    // username : string,
+interface User {
+    username : string,
     TypeScore : number
 }
 
@@ -66,7 +66,7 @@ app.post("/api/users", async (req : Request, res : Response) => {
 
 // update user
 app.put("/api/users/:username", async (req, res) => {
-    const body = req.body as UserData;
+    const body = req.body as User;
     console.log(`put request with body ${body}`);
 
     const { data, error } = await supabase.from("Users").update(body).eq("username", req.params.username);
